@@ -1,0 +1,12 @@
+﻿clients:
+  - client_name: John Doe
+    company_name: Acme Inc.
+    address: 123 Main St, Springfield
+    date: 2025-07-23
+    termination_date: 2026-07-23
+
+  - client_name: Jane Smith
+    company_name: Beta LLC
+    address: 456 Pine Rd, Metropolis
+    date: 2025-07-23
+    termination_date: 2026-07-23
