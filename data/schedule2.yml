@@ -1,0 +1,34 @@
+# Configuration for SSA_Schedule_2_defn.tmpl
+# Boolean Legal - Shareholders Agreement Schedule 2 Definitions
+
+# Company Information
+Company:
+  name: "Example Tech Private Limited"
+  has_subsidiaries: false
+
+# Financial Information
+most_recent_fy_end_date: "March 31, 2024"
+accounts_date: "September 30, 2024"
+
+# Business Details
+business_description: "Software development and technology consulting services"
+
+# Share Capital Information
+equity_share_face_value_numeric: 10
+equity_share_face_value_words: "Ten"
+
+# Agreement Structure
+has_lead_investor: true
+has_existing_sha: false
+
+# Optional: Business Day Cities (uncomment and modify if needed)
+# business_day_cities:
+#   - "Mumbai"
+#   - "New Delhi"
+#   - "Bangalore"
+
+# Additional Configuration (for potential future use)
+document_metadata:
+  template_version: "1.0"
+  last_updated: "2024-12-19"
+  prepared_by: "Boolean Legal"
