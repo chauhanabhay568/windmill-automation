@@ -1,0 +1,149 @@
+
+{#
+Required Variables:
+- most_recent_fy_end_date: Date of the most recent financial year end
+- accounts_date: Date as of which the most recent unaudited financial statements have been prepared
+- business_description: Description of the company's business
+- business_day_cities: List of cities for business day definition (optional)
+- equity_share_face_value_numeric: Numeric face value of equity shares
+- equity_share_face_value_words: Face value of equity shares in words
+- Company: Dictionary containing:
+  - has_subsidiaries: Boolean indicating if company has subsidiaries
+- has_lead_investor: Boolean indicating if there is a lead investor
+- has_existing_sha: Boolean indicating if there is an existing shareholders agreement
+#}
+
+<h1 style="text-align: center;">SCHEDULE 2 | DEFINITIONS</h1>
+
+<p>In addition to the terms defined elsewhere in this Agreement, the following capitalised terms shall have the meanings set forth below:</p>
+
+<p><strong>"<em>Act</em>"</strong> means the Companies Act, 2013, including the rules and regulations thereunder, as amended from time to time, and shall include any statutory replacement or re-enactment thereof;</p>
+
+<p><strong>"<em>Accounts</em>"</strong> means: (a) the audited financial statements (including the balance sheet, profit and loss account, cash flow statement, and notes thereto) of the Company and, if applicable, the consolidated audited financial statements of the Company and its Subsidiaries, for the Financial Year ended {{ most_recent_fy_end_date }} and for all other preceding Financial Years; (b) the unaudited financial statements (including the balance sheet, profit and loss account, cash flow statement, and notes thereto) of the Company and, if applicable, the consolidated unaudited financial statements of the Company and its Subsidiaries, for the period ended on the Accounts Date;</p>
+
+<p><strong>"<em>Accounts Date</em>"</strong> means {{ accounts_date }}, being the date as of which the most recent unaudited financial statements of the Company (and, if applicable, its Subsidiaries) have been prepared prior to the Execution Date.</p>
+
+<p><strong>"<em>Affiliate</em>"</strong> with respect to: (a) a corporation, partnership, association, trust, or any other entity (in each case, a "<strong>SpecifiedPerson</strong>"), means any Person who, Controls, is Controlled by or is under common Control with such Specified Person, including, without limitation any general partner, officer or director of such Specified Person and any venture capital fund now or hereafter existing which is Controlled by or under common Control with one or more general partners or shares the same management company with such Specified Person; and (b) an individual, means any Person who is Controlled by or is under common Control with such individual, a Relative of such individual, and a Person who is Controlled by or in under common Control with a Relative of such individual;</p>
+
+<p><em>"</em><strong><em>Agreed Form</em></strong><em>"</em> means, with respect to any document to be executed / issued / filed / submitted, the draft form of such document mutually agreed by Investors, Promoters and/or the Company, as the case may be, in writing to such document indicating their agreement to execute / issue / file / submit the document in such form at the relevant time;</p>
+
+<p><strong>"<em>Applicable Law</em>"</strong> means all laws, statutes, enactments, acts of legislature or parliament, ordinances, rules, bye-laws, regulations, notifications, guidelines, policies, directions, directives, and orders of any governmental authority; any interpretation, policy, or administrative guidance having the force of law; any judgment, decree, decision, or order of any court, tribunal, or other judicial or quasi-judicial body having jurisdiction over the matter in question; and any rules, regulations, or requirements of any recognized stock exchange(s) on which the [Shares] are or may be listed, in each case: (i) to the extent applicable to the relevant Person, transaction, or circumstance; (ii) as may be in effect on or prior to the Execution Date or thereafter; and (iii) as may be amended, modified, or supplemented from time to time;</p>
+
+<p><strong>"Assets"</strong> means all assets and properties of every kind, nature, and description, whether now existing or hereafter acquired, that are owned, leased, licensed, used, or held for use by the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %}, including:</p>
+<p>(a) real property and interests in real property, including buildings, structures, improvements, fixtures, and fittings thereon;</p>
+<p>(b) tangible personal property, including machinery, equipment, furniture, vehicles, tools, supplies, inventory, and other physical assets;</p>
+<p>(c) intangible property, including intellectual property rights, goodwill, brands, trademarks, patents, copyrights, software, and technology;</p>
+<p>(d) financial assets, including cash, bank accounts, cash equivalents, securities, accounts receivable, notes receivable, and other financial instruments;</p>
+<p>(e) contractual rights and interests, including rights under leases, licenses, permits, contracts, and agreements; and</p>
+<p>(f) any other rights, claims, or interests of economic value, whether absolute, contingent, accrued, or otherwise.</p>
+
+<p><strong>"Bankruptcy Code"</strong> means the Insolvency and Bankruptcy Code, 2016 as amended, supplemented, modified or replaced from time to time;</p>
+
+<p><strong>"<em>Board</em>"</strong> means the board of Directors of the Company, as constituted, from time to time;</p>
+
+<p><strong>"<em>Business</em>"</strong> shall mean {{ business_description }};</p>
+
+<p><strong>"<em>Business</em> <em>Day</em>"</strong> means any day other than Saturday or Sunday, or any other day on which commercial banks are authorised or required by Applicable Law to remain closed for general banking business in {% if business_day_cities %}{{ business_day_cities|join(", ") }}{% else %}Bangalore, India{% endif %};</p>
+
+<p><strong>"<em>Charter Documents</em>"</strong> means the memorandum of association of the Company and/or the articles of association of the Company, as the case may be, as amended from time to time;</p>
+
+<p><strong>"<em>Claim</em>"</strong> means any:</p>
+<p>(a) demand, claim, action, proceeding, suit, litigation, prosecution, investigation, or inquiry;</p>
+<p>(b) whether civil, criminal, administrative, regulatory, arbitral, or investigative in nature;</p>
+<p>(c) whether formal or informal;</p>
+<p>(d) whether made, brought, initiated, filed, or pending by or against a Person;</p>
+<p>(e) whether before any Governmental Authority, court, arbitral tribunal, mediator, other forum of competent jurisdiction, or made directly between parties without the involvement of any third-party forum; and</p>
+<p>(f) including, without limitation, any demand or notice for indemnification, compensation, reimbursement, or other remedial action made pursuant to the provisions of this Agreement, regardless of whether such demand or notice has progressed to formal legal proceedings.</p>
+
+<p><strong>"Closing"</strong> shall mean the completion of the events set out in Clause 4 with respect to the subscription to the Subscription Securities by an Investor and issuance and allotment of such Subscription Securities by the Company to such Investor in accordance with the terms of this Agreement, and "<strong>Closings</strong>" shall mean all such completions collectively. The date on which Closing occurs with respect to a particular Investor shall be referred to as the "<strong>Closing Date</strong>" for such Investor. For the avoidance of doubt, Closing may occur on different dates for different Investors, and references to Closing in this Agreement shall be construed accordingly with respect to each Investor unless the context requires otherwise;</p>
+
+<p><strong>"<em>Company Designated Account</em>"</strong> means the following bank account of the Company, which is a separate bank account, in accordance with the Companies (Prospectus and Allotment of Securities) Rules, 2014:</p>
+<table border="0" cellpadding="5">
+  <tr><td>Bank</td><td>:</td><td></td></tr>
+  <tr><td>Account Name</td><td>:</td><td></td></tr>
+  <tr><td>Account Number</td><td>:</td><td></td></tr>
+  <tr><td>SWIFT Code</td><td>:</td><td></td></tr>
+  <tr><td>IFSC</td><td>:</td><td></td></tr>
+  <tr><td>Branch Name</td><td>:</td><td></td></tr>
+</table>
+
+<p><strong>"<em>Control</em>"</strong> (including, with its correlative meanings, the terms "<strong><em>Controlled by</em></strong>" or "<strong><em>under common Control with</em></strong>") with respect to any Person, means the possession, directly or indirectly, of the power to direct or cause the direction of the management or policies of such Person, whether through the ownership of voting Securities or other ownership interests, contractual arrangements or any other means. For purposes of this definition, a Person shall be deemed to Control another Person if such first Person: (i) owns, directly or indirectly, Securities representing more than 50% (fifty percent) of the value or voting power of such other Person; (ii) owns, directly or indirectly, more than 50% (fifty percent) of the partnership, membership, or other ownership interests (based upon value or voting power) of such other Person; or (iii) has the power to elect more than half of the directors, partners, or other individuals exercising similar authority with respect to such other Person.</p>
+
+<p><strong>"<em>Director</em>"</strong> means a director of the Company as appointed by the Board, from time to time.</p>
+
+<p><strong>"<em>Disclosure</em>"</strong> means the specific facts, information, and matters fully, fairly, and accurately disclosed in the Execution Date Disclosure Schedule or the Closing Disclosure Schedule, as applicable, provided by the Warrantors in accordance with this Agreement, and specifically disclosed against each of the Warranties; provided, however, that "<strong>Disclosure</strong>" shall not include any disclosures relating to (i) Fundamental Warranties, (ii) Specific Indemnity Items, or (iii) fraud, gross negligence, or willful misconduct by any of the Warrantors. The terms "<strong>Disclosed</strong>" and "<strong>Disclose</strong>" shall be construed accordingly.</p>
+
+<p><strong>"Employment Agreements"</strong> means each of the employment agreements executed by and between the Company and each of the Promoters, in the Agreed Form approved by the {% if has_lead_investor %}Lead Investor{% else %}Investor(s){% endif %}, setting forth the terms and conditions of employment of each Promoter with the Company.</p>
+
+<p><strong>"<em>Execution Date</em> <em>Disclosure Schedule</em>"</strong> means the disclosure schedule attached as <strong>Schedule 10</strong> to this Agreement as delivered to the Investors on the Execution Date and the Closing Date (if applicable), as the case may be.</p>
+
+<p><strong>"<em>Encumbrance</em>"</strong> means any mortgage, charge (whether fixed or floating), pledge, lien, hypothecation, assignment, deed of trust, title retention, security interest or other encumbrance of any kind securing, or conferring any priority of payment in respect of, any obligation of any Person; purchase or option agreement, right of first refusal, right of first offer, or similar restrictive covenant; lease, sub-lease, occupancy agreement, license, or similar arrangement; voting agreement, interest, option, right to acquire, restriction, or limitation; easement, right-of-way, restriction on use, covenant, condition, equitable interest, or other similar restriction; power of attorney affecting title, possession, or use; adverse claim as to title, possession, or use; or any agreement, arrangement, or obligation to create or grant any of the foregoing or having similar effect.</p>
+
+<p><strong>"<em>Equity Shares</em>"</strong> means equity shares of the Company carrying voting rights and face value of INR {{ equity_share_face_value_numeric|default("[FACE VALUE]") }} (Rupees {{ equity_share_face_value_words|default("[FACE VALUE IN WORDS]") }}) each;</p>
+
+<p><em>"</em><strong><em>ESOPs</em></strong><em>"</em> means any equity securities, options, restricted stock units, stock appreciation rights, or other rights to acquire equity securities of the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %} granted or issued to employees, directors, officers, consultants, or advisors of the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %}, as compensation or incentive for service to the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %}.</p>
+
+<p><em>"</em><strong><em>ESOP Plan</em></strong><em>"</em> means any employee stock option plan, stock purchase scheme, equity-based incentive scheme, or any other similar incentive program adopted and implemented by the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %} in accordance with the terms of this Agreement, pursuant to which ESOPs may be granted or issued to employees, directors, officers, consultants, or advisors of the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %}.</p>
+
+<p><strong>"Fair Market Value"</strong> or <strong>"FMV"</strong> shall mean the fair market value of the Securities of the Company determined by an independent chartered accountant/ merchant banker/ registered valuer appointed by Company with the prior written approval of the Lead Investor.</p>
+
+<p><strong>"<em>Financial Year</em>"</strong> means the year commencing on the first day of April and ending on the last day of March of the next calendar year.</p>
+
+<p><strong>"<em>Fully Diluted Basis</em>"</strong> means a calculation assuming that: all outstanding Securities that are convertible into or exercisable or exchangeable for Equity Shares (including options, warrants, convertible debt instruments, and convertible preference shares) have been fully converted, exercised, or exchanged; all ESOPs that have been granted but not yet exercised, converted, or exchanged have been fully exercised, converted, or exchanged; all Equity Shares reserved for issuance pursuant to the ESOP Plan or any similar plan, whether or not granted as of such date, have been issued; and any adjustments required pursuant to anti-dilution provisions, price protection mechanisms, or similar provisions in the Company's Charter Documents or any agreement to which the Company is a party have been made.</p>
+
+<p><strong>"<em>Fundamental Warranties</em>"</strong> means the warranties set forth in paragraph 1 (<em>Organization, Good Standing, Corporate Power and Qualification</em>), paragraph 2 (<em>Shareholding</em>), paragraph 3 (<em>Group</em>), paragraph 4 (<em>Authorisation</em>), paragraph 5 (<em>Valid Issuance of Shares</em>), paragraph 6 (<em>Insolvency</em>) paragraph 12 (<em>Compliance with Applicable Laws and Other Instruments</em>) and paragraph 22 (<em>Anti-Bribery and Anti-Corruption Laws</em>) of <strong>Schedule 9 (Warranties)</strong> of this Agreement.</p>
+
+<p><strong>"<em>Governmental</em> <em>Authority</em>"</strong> means any national, federal, state, provincial, local, municipal, or other government; governmental or quasi-governmental authority of any nature (including any governmental agency, branch, department, official, or entity and any court or other tribunal); multi-national organisation or body; body exercising, or entitled to exercise, any administrative, executive, judicial, legislative, police, regulatory, or taxing authority or power of any nature; regulatory or administrative authority, agency, commission, or board having jurisdiction or oversight in the relevant matter; or self-regulatory organisation, stock exchange, recognised investment exchange, or other non-governmental regulatory authority or agency authorised or recognised to have jurisdiction or oversight in the relevant matter.</p>
+
+<p><strong>"<em>Group Entities</em>"</strong> means the group entities (including subsidiaries) of the Company, if any;</p>
+
+<p><strong>"<em>INR</em>"</strong> or <strong>"<em>Rupees</em>"</strong> means Indian Rupees, the lawful currency of India for the time being.</p>
+
+<p><strong>"<em>Indian GAAP</em>"</strong> means the generally accepted accounting standards as prevalent in India from time to time.</p>
+
+<p><strong>"<em>Intellectual Property</em>"</strong> means all intellectual property rights of any kind, whether registered or unregistered, existing now or in the future, in any jurisdiction worldwide, including: (i) patents, patent applications, patent disclosures, and inventions (whether patentable or not); (ii) trademarks, service marks, trade dress, trade names, corporate names, logos, slogans, internet domain names, and other source identifiers, together with all goodwill associated with each of the foregoing; (iii) copyrights, works of authorship (whether copyrightable or not), and moral rights; (iv) software, data, databases, and compilations; (v) trade secrets, know-how, confidential information, and proprietary processes, formulas, and algorithms; (vi) designs, industrial designs, and mask works; (vii) all registrations, applications, renewals, extensions, continuations, divisions, or reissues of the foregoing; (viii) rights in social media accounts and content; (ix) rights of publicity and privacy; (x) all other intellectual property and industrial property rights; and (xi) all tangible embodiments of the foregoing, in each case that are owned, licensed, or otherwise used or held for use by the Company{% if Company.has_subsidiaries %} and/or its Subsidiaries{% endif %} in connection with its business, as currently conducted or as proposed to be conducted.</p>
+
+<p><em>"</em><strong><em>IT Act</em></strong><em>"</em> means the Information Technology Act, 2000;</p>
+
+<p><strong>"<em>Loss</em>"</strong> / <strong>"Losses"</strong> includes any and all damages, losses, liabilities, obligations, penalties, fines, judgments, settlements, awards, costs, and expenses (including reasonable attorneys' fees, court costs, and fees of experts), Taxes, diminution in value, loss of revenue, loss of production, loss of profits, loss of business opportunity, and other financial detriments of any kind, and whether based in contract, tort, strict liability, or any other theory of recovery, that are actually suffered, incurred, or sustained by, or imposed upon, the relevant Person.</p>
+
+<p><strong>"<em>Material Adverse Effect</em>"</strong> means any event, occurrence, fact, condition, change, development or effect that, individually or in the aggregate, has had or may reasonably be expected to have a material adverse effect on: (a) the ability of the Company to consummate the transactions contemplated herein or to perform its obligations hereunder or pursuant to any of the Transaction Documents; or (b) the business, operations, assets, liabilities, financial condition, results of operations, or prospects of the Company; or (c) the validity or enforceability of any of the Transaction Documents, the validity or enforceability of any of the transactions contemplated thereunder, or of the rights or remedies of the Investors thereunder; or (d) the status and validity of any material contracts, consents or approvals required for the Company to carry on the Business.</p>
+
+<p><strong>"<em>Ordinary Course of Business</em>"</strong> shall mean an action, event or circumstance that is recurring in nature and is taken in the ordinary course of the Person's normal day-to-day operations, and: (a) taken in accordance with sound and prudent business practices; (b) similar in nature and magnitude to actions customarily taken, without any separate or special authorization, in the ordinary course of the normal day-to-day operations of other Persons that are engaged in businesses similar to the Person's business; and (c) consistent with past practice and existing policies (including those in relation to debtors and creditors).</p>
+
+<p><strong>"<em>Person</em>"</strong> means any natural person, limited or unlimited liability company, corporation, partnership (whether limited or unlimited), proprietorship, Hindu undivided family, trust, union, association, society, co-operative society, government or any agency or political subdivision thereof or any other entity that may be treated as a Person under Applicable Law.</p>
+
+<p><em>"</em><strong><em>Posh Act</em></strong><em>"</em> means Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013 and ruled made thereunder;</p>
+
+<p><strong>"<em>Restated Articles</em>"</strong> means the articles of association of the Company, restated and amended in conformity with the Transaction Documents.</p>
+
+<p><strong>"{% if has_existing_sha %}Restated SHA{% else %}SHA{% endif %}"</strong> means the shareholders' agreement of even date executed among the Company, the Promoters, the Investors and other existing shareholders of the Company, if any.</p>
+
+<p><em>"</em><strong><em>ROC</em></strong><em>"</em> means the Registrar of Companies;</p>
+
+<p><strong>"Securities"</strong> means any and all of the following, whether existing now or created in the future: (i) shares, stocks, or other equity interests in the capital of the Company, securities conferring voting rights in the Company, preference shares, convertible preference shares, redeemable preference shares, and depositary receipts or similar instruments representing any of the foregoing; (ii) debentures, bonds, notes, convertible debentures, or other instruments evidencing indebtedness, certificates of deposit, commercial paper, or similar instruments; (iii) options, warrants, rights, or similar instruments entitling the holder to subscribe for, purchase, or otherwise acquire any securities described in clauses (i) or (ii) above, futures, forwards, swaps, or other derivative contracts relating to securities, and any instrument whose value is derived from, or based on, the value of any securities or any index of securities; (iv) any right, option, or entitlement to any of the foregoing (whether conditional or unconditional, whether direct or indirect, and whether arising by contract, operation of law, or otherwise); and (v) any other instrument, right, or interest that is treated as a "security" under applicable securities laws or represents an economic interest in the Company or its assets or profits; regardless of whether certificated or uncertificated, whether voting or non-voting, and whether or not registered under any securities laws.</p>
+
+<p><strong>"<em>Shares</em>"</strong> means all classes of shares in the share capital of the Company issued from time to time, together with all rights, differential rights, obligations, title, interest and claim in such Shares.</p>
+
+<p><strong>"<em>Shareholder</em>"</strong> means a Person whose name is entered in the register of members of the Company.</p>
+
+<p><strong>"<em>SPDI Rules</em>"</strong> means the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules 2011, as amended, modified, or re-enacted from time to time.</p>
+
+<p><strong>"Subscription Securities"</strong> shall refer to the aggregate number of compulsorily convertible preference shares to be issued to the Investors on the terms and conditions as set forth in Part C of <strong>SCHEDULE 4</strong>;</p>
+
+<p><strong>"<em>Subscription Amount</em>"</strong> shall refer to the aggregate amount payable by the Investors for subscription to the Subscription Securities under the Agreement.</p>
+
+<p><strong>"<em>Substantiated</em>"</strong> means in relation to any Claim: (a) the amount of such Claim, where the Promoters have indicated in writing to the Indemnified Party that they do not wish to challenge such Claim within 15 (fifteen) days of the notice referred to <strong>Schedule 13</strong>; or (b) in circumstances other than those set out in (a) above, the extent to which such Claim is proved and is determined: (i) other than in relation to a Third‐Party Claim, in a determination in accordance with Clause 10.5 (<em>dispute resolution provision</em>); and (ii) in relation to a Third‐Party Claim, in the judicial determination of a court of competent jurisdiction (where such Third‐Party Claim is not subject to arbitration) or in an award (where such Third‐Party Claim is subject to arbitration).</p>
+
+<p><em>"</em><strong><em>Subsidiary</em></strong><em>"</em> has the same meaning as set forth in the Companies Act 2013;</p>
+
+<p><strong>"<em>Taxes</em>"</strong> means all forms of direct and indirect taxation, cess and statutory and governmental, state, federal, provincial, local governmental or municipal charges, fees, duties, contributions, levies or other assessments, withholdings and deductions or other tax of any kind (including any tax levied on account of being regarded as 'representative assessee') or any charge of any kind in the nature of (or similar to) taxes whatsoever and whenever imposed, including, without limitation, all duties (including stamp duties), excise, customs, capital gains tax, buy‐back tax, minimum alternate tax, service tax, value added tax, dividend distribution tax, goods and services tax and including all related penalties, charges, costs and interest in India or in any other jurisdiction.</p>
+
+<p><em>"</em><strong><em>Third-Party Claim</em></strong><em>"</em> means a notice, demand, claim, action, assessment or action, taken by any Governmental Authorities, or any other third party (not an Indemnified Party) which results in a Loss giving rise to a Claim for indemnity.</p>
+
+<p><strong>"<em>Transaction Documents</em>"</strong> means this Agreement, the {% if has_existing_sha %}Restated SHA{% else %}SHA{% endif %}, the Restated Articles, the Employment Agreements, and all other agreements, instruments, certificates, and documents that are executed and delivered by any of the Parties in connection with the transactions contemplated by this Agreement, whether on or after the date hereof, including any amendments, supplements, or modifications to any of the foregoing.</p>
+
+<p><strong>"<em>Warranties</em>"</strong> means the representations and warranties of the Company and the Promoters set out in <strong>Schedule 9 (Warranties)</strong> of this Agreement, made in relation to the Company{% if Company.has_subsidiaries %} and its Subsidiaries{% endif %}.</p>
+
+<p><strong>"<em>Warrantors</em>"</strong> means the Promoters and the Company, jointly and severally.</p>
+```
